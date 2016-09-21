@@ -154,6 +154,12 @@ TARGET_RECOVERY_UI_LIB := librecovery_ui_msm
 
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
+# SecComp
+BOARD_SECCOMP_POLICY := device/zuk/mustang/seccomp
+
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+
 #Add support for firmare upgrade on 8996
 HAVE_SYNAPTICS_DSX_FW_UPGRADE := true
 
