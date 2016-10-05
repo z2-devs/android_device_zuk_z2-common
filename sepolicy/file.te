@@ -175,3 +175,6 @@ type ssr_ramdump_data_file, file_type, data_file_type;
 
 # qtitetherservice files
 type qtitetherservice_app_data_file, file_type, data_file_type;
+type fpc_sysfs, fs_type, sysfs_type;
+type fpc_data_file, file_type, data_file_type;
+type fpc_socket, file_type;
