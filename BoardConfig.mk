@@ -180,9 +180,6 @@ ADD_RADIO_FILES := true
 
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
-# SecComp
-BOARD_SECCOMP_POLICY := device/zuk/z2-common/seccomp
-
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
