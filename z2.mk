@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fingerprint.msm8996 \
     fingerprintd
+    ZukPocketMode
 
 # Browser
 PRODUCT_PACKAGES += \
