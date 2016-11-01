@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8996/overlay
+DEVICE_PACKAGE_OVERLAYS := device/zuk/mustang/overlay
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 BOARD_HAVE_QCOM_FM := true
 TARGET_USES_NQ_NFC := false
@@ -33,12 +33,12 @@ TARGET_USES_NQ_NFC := false
 
 # copy customized media_profiles and media_codecs xmls for msm8996
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/qcom/msm8996/media_profiles.xml:system/etc/media_profiles.xml \
-                      device/qcom/msm8996/media_codecs.xml:system/etc/media_codecs.xml \
-                      device/qcom/msm8996/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
+PRODUCT_COPY_FILES += device/zuk/mustang/media_profiles.xml:system/etc/media_profiles.xml \
+                      device/zuk/mustang/media_codecs.xml:system/etc/media_codecs.xml \
+                      device/zuk/mustang/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
-PRODUCT_COPY_FILES += device/qcom/msm8996/whitelistedapps.xml:system/etc/whitelistedapps.xml
+PRODUCT_COPY_FILES += device/zuk/mustang/whitelistedapps.xml:system/etc/whitelistedapps.xml
 
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -66,3 +66,31 @@ PRODUCT_BOOT_JARS += qcmediaplayer
 
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
+
+# Audio configuration file
+ifeq ($(TARGET_USES_AOSP), true)
+PRODUCT_COPY_FILES += \
+    device/qcom/common/media/audio_policy.conf:system/etc/audio_policy.conf
+else
+PRODUCT_COPY_FILES += \
+    device/zuk/mustang/audio_policy.conf:system/etc/audio_policy.conf
+endif
+
+PRODUCT_COPY_FILES += \
+    device/zuk/mustang/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
+    device/zuk/mustang/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/zuk/mustang/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/zuk/mustang/mixer_paths_tasha.xml:system/etc/mixer_paths_tasha.xml \
+    device/zuk/mustang/mixer_paths_tasha_z2_row.xml:system/etc/mixer_paths_tasha_z2_row.xml \
+    device/zuk/mustang/mixer_paths_dtp.xml:system/etc/mixer_paths_dtp.xml \
+    device/zuk/mustang/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml \
+    device/zuk/mustang/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
+    device/zuk/mustang/audio_platform_info_i2s.xml:system/etc/audio_platform_info_i2s.xml \
+    device/zuk/mustang/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    device/zuk/mustang/sound_trigger_mixer_paths_wcd9330.xml:system/etc/sound_trigger_mixer_paths_wcd9330.xml \
+    device/zuk/mustang/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
+    device/zuk/mustang/audio_platform_info.xml:system/etc/audio_platform_info.xml
+
+# Listen configuration file
+PRODUCT_COPY_FILES += \
+    device/zuk/mustang/listen_platform_info.xml:system/etc/listen_platform_info.xml
