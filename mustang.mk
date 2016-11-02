@@ -107,3 +107,10 @@ PRODUCT_COPY_FILES += \
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
     device/zuk/mustang/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+
+# Keylayout
+PRODUCT_PACKAGES += \
+    gpio-keys.kl \
+    qpnp_pon.kl \
+    synaptics_dsx.kl \
+    synaptics_rmi4_i2c.kl
