@@ -108,3 +108,7 @@ PRODUCT_PACKAGES += \
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
     device/zuk/mustang/sensors/hals.conf:system/etc/sensors/hals.conf
+
+# MSM IRQ Balancer configuration file
+PRODUCT_COPY_FILES += \
+    device/zuk/mustang/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
