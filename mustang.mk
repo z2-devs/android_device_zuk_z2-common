@@ -99,3 +99,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/zuk/mustang/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat \
     device/zuk/mustang/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
+
+# Wifi
+PRODUCT_PACKAGES += \
+    wpa_supplicant_overlay.conf \
+    p2p_supplicant_overlay.conf
