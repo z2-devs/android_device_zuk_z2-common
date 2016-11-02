@@ -142,6 +142,11 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    fingerprint.msm8996 \
+    fingerprintd
+
 # Browser
 PRODUCT_PACKAGES += \
     Gello
