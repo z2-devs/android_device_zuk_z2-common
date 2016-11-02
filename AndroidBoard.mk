@@ -167,12 +167,12 @@ include $(BUILD_PREBUILT)
 #----------------------------------------------------------------------
 # Radio image
 #----------------------------------------------------------------------
-ifeq ($(ADD_RADIO_FILES), true)
-radio_dir := $(LOCAL_PATH)/radio
-RADIO_FILES := $(shell cd $(radio_dir) ; ls)
-$(foreach f, $(RADIO_FILES), \
-	$(call add-radio-file,radio/$(f)))
-endif
+# ifeq ($(ADD_RADIO_FILES), true)
+# radio_dir := $(LOCAL_PATH)/radio
+# RADIO_FILES := $(shell cd $(radio_dir) ; ls)
+# $(foreach f, $(RADIO_FILES), \
+#	$(call add-radio-file,radio/$(f)))
+# endif
 
 #----------------------------------------------------------------------
 # extra images
