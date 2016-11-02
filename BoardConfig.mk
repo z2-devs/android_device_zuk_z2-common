@@ -23,6 +23,8 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
+LOCAL_DIR := device/zuk/mustang
+
 TARGET_OTA_ASSERT_DEVICE := z2_row,mustang
 
 TARGET_BOARD_PLATFORM := msm8996
@@ -119,6 +121,9 @@ TARGET_PD_SERVICE_ENABLED := true
 
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_BOOTIMG_SIGNED := true
+
+#System Properties for MSM8996
+TARGET_SYSTEM_PROP := $(LOCAL_DIR)/system.prop
 
 # Enable dex pre-opt to speed up initial boot
 ifeq ($(HOST_OS),linux)
