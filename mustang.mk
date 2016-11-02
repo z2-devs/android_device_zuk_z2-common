@@ -132,6 +132,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/zuk/mustang/listen_platform_info.xml:system/etc/listen_platform_info.xml
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.qcom.power.rc \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.qcom.usb.sh \
+    init.target.rc \
+    ueventd.qcom.rc
+
 #ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
