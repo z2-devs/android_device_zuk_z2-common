@@ -146,6 +146,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gello
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+
 #ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
