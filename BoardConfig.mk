@@ -141,9 +141,16 @@ USE_SENSOR_MULTI_HAL := true
 
 TARGET_LDPRELOAD := libNimsWrap.so
 
-TARGET_COMPILE_WITH_MSM_KERNEL := true
+#TARGET_COMPILE_WITH_MSM_KERNEL := true
 
-TARGET_KERNEL_APPEND_DTB := true
+#TARGET_KERNEL_APPEND_DTB := true
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/zuk/mustang/sepolicy
+
+include device/qcom/sepolicy/Android.mk
+
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := false
 
