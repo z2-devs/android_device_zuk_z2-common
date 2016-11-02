@@ -22,12 +22,12 @@ $(call inherit-product, device/zuk/mustang/mustang.mk)
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_oneplus3
-PRODUCT_DEVICE := oneplus3
-PRODUCT_MANUFACTURER := OnePlus
-PRODUCT_BRAND := OnePlus
+PRODUCT_NAME := cm_mustang
+PRODUCT_DEVICE := mustang
+PRODUCT_MANUFACTURER := ZUK
+PRODUCT_BRAND := ZUK
 
-PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+PRODUCT_GMS_CLIENTID_BASE := android-zuk
 
 TARGET_VENDOR_PRODUCT_NAME := z2_row
 TARGET_VENDOR_DEVICE_NAME := z2_row
@@ -36,7 +36,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=mustang PRODUCT_NAME=mustang
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=ZUK/z2_row/z2_row:6.0.1/MMB29M/2.1.120_160829:user/release-keys \
     PRIVATE_BUILD_DESC="z2_row-user 6.0.1 MMB29M release-keys"
-
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
 TARGET_VENDOR := zuk
