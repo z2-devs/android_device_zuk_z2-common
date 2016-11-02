@@ -3,33 +3,33 @@ LOCAL_PATH := $(call my-dir)
 #----------------------------------------------------------------------
 # Compile (L)ittle (K)ernel bootloader and the nandwrite utility
 #----------------------------------------------------------------------
-ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
+# ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
 
 # Compile
-include bootable/bootloader/lk/AndroidBoot.mk
+# include bootable/bootloader/lk/AndroidBoot.mk
 
-$(INSTALLED_BOOTLOADER_MODULE): $(TARGET_EMMC_BOOTLOADER) | $(ACP)
-	$(transform-prebuilt-to-target)
-$(BUILT_TARGET_FILES_PACKAGE): $(INSTALLED_BOOTLOADER_MODULE)
+# $(INSTALLED_BOOTLOADER_MODULE): $(TARGET_EMMC_BOOTLOADER) | $(ACP)
+#	$(transform-prebuilt-to-target)
+# $(BUILT_TARGET_FILES_PACKAGE): $(INSTALLED_BOOTLOADER_MODULE)
 
-droidcore: $(INSTALLED_BOOTLOADER_MODULE)
-endif
+# droidcore: $(INSTALLED_BOOTLOADER_MODULE)
+# endif
 
 #----------------------------------------------------------------------
 # Compile Linux Kernel
 #----------------------------------------------------------------------
-ifeq ($(KERNEL_DEFCONFIG),)
-    ifeq ($(TARGET_BUILD_VARIANT),user)
-      KERNEL_DEFCONFIG := msm-perf_defconfig
-    else
-      KERNEL_DEFCONFIG := msm_defconfig
-    endif
-endif
+# ifeq ($(KERNEL_DEFCONFIG),)
+#    ifeq ($(TARGET_BUILD_VARIANT),user)
+#      KERNEL_DEFCONFIG := msm-perf_defconfig
+#    else
+#      KERNEL_DEFCONFIG := msm_defconfig
+#    endif
+# endif
 
-include kernel/AndroidKernel.mk
+# include kernel/AndroidKernel.mk
 
-$(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
-	$(transform-prebuilt-to-target)
+# $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
+#	$(transform-prebuilt-to-target)
 
 #----------------------------------------------------------------------
 # Copy additional target-specific files
