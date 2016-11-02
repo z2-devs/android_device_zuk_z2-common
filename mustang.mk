@@ -142,6 +142,10 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+# Browser
+PRODUCT_PACKAGES += \
+    Gello
+
 #ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
