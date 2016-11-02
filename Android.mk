@@ -27,4 +27,5 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter mustang,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(call $(LOCAL_PATH)/rootdir/Android.mk)
 endif
