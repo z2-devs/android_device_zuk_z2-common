@@ -4,7 +4,7 @@
    "target_path": "device/qcom/common"
  },
  {
-   "repository": "android_kernel_zuk_mustang",
-   "target_path": "kernel/zuk/mustang"
+   "repository": "android_kernel_zuk_msm8996",
+   "target_path": "kernel/zuk/msm8996"
  }
 ]
