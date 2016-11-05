@@ -150,9 +150,31 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gello
 
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.msm8996
+
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    Snap \
+    camera.msm8996
+
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8996
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8996
+
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8996 \
+    libcurl
+
+# Doze
+PRODUCT_PACKAGES += \
+    ZukDoze
 
 #ANT+ stack
 PRODUCT_PACKAGES += \
@@ -171,6 +193,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
     p2p_supplicant_overlay.conf
 
+PRODUCT_COPY_FILES += \
+    device/zuk/mustang/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    device/zuk/mustang/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
+    device/zuk/mustang/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny \
+
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
     device/zuk/mustang/sensors/hals.conf:system/etc/sensors/hals.conf
@@ -185,3 +212,5 @@ PRODUCT_PACKAGES += \
     qpnp_pon.kl \
     synaptics_dsx.kl \
     synaptics_rmi4_i2c.kl
+
+$(call inherit-product, vendor/zuk/mustang/mustang-vendor.mk)
