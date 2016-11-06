@@ -80,7 +80,7 @@ PRODUCT_COPY_FILES += device/zuk/mustang/media_profiles.xml:system/etc/media_pro
                       device/zuk/mustang/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
-# PRODUCT_COPY_FILES += device/zuk/mustang/whitelistedapps.xml:system/etc/whitelistedapps.xml
+PRODUCT_COPY_FILES += device/zuk/mustang/whitelistedapps.xml:system/etc/whitelistedapps.xml
 
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -120,7 +120,6 @@ PRODUCT_COPY_FILES += \
     device/zuk/mustang/mixer_paths_tasha_z2_row.xml:system/etc/mixer_paths_tasha_z2_row.xml \
     device/zuk/mustang/mixer_paths_dtp.xml:system/etc/mixer_paths_dtp.xml \
     device/zuk/mustang/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml \
-    device/zuk/mustang/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
     device/zuk/mustang/audio_platform_info_i2s.xml:system/etc/audio_platform_info_i2s.xml \
     device/zuk/mustang/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
     device/zuk/mustang/sound_trigger_mixer_paths_wcd9330.xml:system/etc/sound_trigger_mixer_paths_wcd9330.xml \
