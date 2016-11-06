@@ -107,6 +107,9 @@ TARGET_NO_RPC := true
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 TARGET_INIT_VENDOR_LIB := libinit_msm8996
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 #Enable Peripheral Manager
 TARGET_PER_MGR_ENABLED := true
 
