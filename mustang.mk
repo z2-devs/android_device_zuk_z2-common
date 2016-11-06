@@ -214,7 +214,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     gpio-keys.kl \
     qpnp_pon.kl \
-    synaptics_dsx.kl \
-    synaptics_rmi4_i2c.kl
+    synaptics_dsx.kl
 
 $(call inherit-product, vendor/zuk/mustang/mustang-vendor.mk)
