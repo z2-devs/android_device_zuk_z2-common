@@ -196,7 +196,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     device/zuk/mustang/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    device/zuk/mustang/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
+    device/zuk/mustang/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
     device/zuk/mustang/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny \
 
 # Sensor HAL conf file
