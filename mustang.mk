@@ -187,8 +187,7 @@ PRODUCT_PACKAGES += \
 
 # WLAN driver configuration files
 PRODUCT_COPY_FILES += \
-    device/zuk/mustang/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat \
-    device/zuk/mustang/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
+    device/zuk/mustang/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat
 
 # Wifi
 PRODUCT_PACKAGES += \
