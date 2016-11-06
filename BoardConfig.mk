@@ -99,6 +99,8 @@ TARGET_KERNEL_SOURCE := kernel/zuk/msm8996
 TARGET_KERNEL_CONFIG := cyanogenmod_mustang_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
+TARGET_RECOVERY_FSTAB := device/zuk/mustang/recovery.fstab
+
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 
@@ -106,6 +108,7 @@ TARGET_NO_RPC := true
 
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 TARGET_INIT_VENDOR_LIB := libinit_msm8996
+TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8996
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
