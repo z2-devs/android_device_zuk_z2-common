@@ -131,6 +131,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/zuk/mustang/listen_platform_info.xml:system/etc/listen_platform_info.xml
 
+# Sec_Configration
+PRODUCT_COPY_FILES += \
+    device/zuk/mustang/sec_config:system/etc/sec_config
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
