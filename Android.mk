@@ -25,7 +25,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter mustang,$(TARGET_DEVICE)),)
+ifneq ($(filter z2_row,z2_plus,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 include $(call $(LOCAL_PATH)/rootdir/Android.mk)
 LOCAL_JACK_ENABLED := false

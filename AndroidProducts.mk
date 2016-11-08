@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/mustang.mk
+	$(LOCAL_DIR)/z2-common.mk

@@ -23,9 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-LOCAL_DIR := device/zuk/mustang
-
-TARGET_OTA_ASSERT_DEVICE := z2_row,mustang
+LOCAL_DIR := device/zuk/z2-common
 
 TARGET_BOARD_PLATFORM := msm8996
 TARGET_BOOTLOADER_BOARD_NAME := msm8996
@@ -99,10 +97,9 @@ TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/zuk/msm8996
-TARGET_KERNEL_CONFIG := cyanogenmod_mustang_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
-TARGET_RECOVERY_FSTAB := device/zuk/mustang/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/zuk/z2-common/recovery.fstab
 
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
@@ -110,8 +107,8 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 TARGET_NO_RPC := true
 
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
-TARGET_INIT_VENDOR_LIB := libinit_msm8996
-TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8996
+TARGET_INIT_VENDOR_LIB := libinit_z2
+TARGET_RECOVERY_DEVICE_MODULES := libinit_z2
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -131,15 +128,13 @@ TARGET_PD_SERVICE_ENABLED := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_BOOTIMG_SIGNED := true
 
-#System Properties for MSM8996
+# System Properties for z2-common
 TARGET_SYSTEM_PROP := $(LOCAL_DIR)/system.prop
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
 
 TARGET_LDPRELOAD := libNimsWrap.so
-
-TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 TARGET_KERNEL_APPEND_DTB := true
 # Added to indicate that protobuf-c is supported in this build
@@ -153,7 +148,7 @@ ADD_RADIO_FILES := true
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
 # SecComp
-BOARD_SECCOMP_POLICY := device/zuk/mustang/seccomp
+BOARD_SECCOMP_POLICY := device/zuk/z2-common/seccomp
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk

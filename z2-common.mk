@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PACKAGE_OVERLAYS := device/zuk/mustang/overlay
+DEVICE_PACKAGE_OVERLAYS := device/zuk/z2-common/overlay
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 BOARD_HAVE_QCOM_FM := true
 TARGET_USES_NQ_NFC := false
@@ -80,13 +80,6 @@ PRODUCT_BOOT_JARS += \
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
 
-# copy customized media_profiles and media_codecs xmls for msm8996
-ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/zuk/mustang/media_profiles.xml:system/etc/media_profiles.xml \
-                      device/zuk/mustang/media_codecs.xml:system/etc/media_codecs.xml \
-                      device/zuk/mustang/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
-endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
-
 PRODUCT_COPY_FILES += device/zuk/mustang/whitelistedapps.xml:system/etc/whitelistedapps.xml
 
 # Override heap growth limit due to high display density on device
@@ -124,7 +117,6 @@ PRODUCT_COPY_FILES += \
     device/zuk/mustang/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     device/zuk/mustang/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/zuk/mustang/mixer_paths_tasha.xml:system/etc/mixer_paths_tasha.xml \
-    device/zuk/mustang/mixer_paths_tasha_z2_row.xml:system/etc/mixer_paths_tasha_z2_row.xml \
     device/zuk/mustang/mixer_paths_dtp.xml:system/etc/mixer_paths_dtp.xml \
     device/zuk/mustang/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml \
     device/zuk/mustang/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
@@ -135,10 +127,6 @@ PRODUCT_COPY_FILES += \
 # Listen configuration file
 PRODUCT_COPY_FILES += \
     device/zuk/mustang/listen_platform_info.xml:system/etc/listen_platform_info.xml
-
-# Sec_Configration
-PRODUCT_COPY_FILES += \
-    device/zuk/mustang/sec_config:system/etc/sec_config
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -213,11 +201,3 @@ PRODUCT_COPY_FILES += \
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
     device/zuk/mustang/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
-
-# Keylayout
-PRODUCT_PACKAGES += \
-    gpio-keys.kl \
-    qpnp_pon.kl \
-    synaptics_dsx.kl
-
-$(call inherit-product, vendor/zuk/mustang/mustang-vendor.mk)
