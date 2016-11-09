@@ -80,7 +80,7 @@ PRODUCT_BOOT_JARS += \
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
 
-PRODUCT_COPY_FILES += device/zuk/mustang/whitelistedapps.xml:system/etc/whitelistedapps.xml
+PRODUCT_COPY_FILES += device/zuk/z2-common/audio/whitelistedapps.xml:system/etc/whitelistedapps.xml
 
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -109,24 +109,24 @@ PRODUCT_COPY_FILES += \
     device/qcom/common/media/audio_policy.conf:system/etc/audio_policy.conf
 else
 PRODUCT_COPY_FILES += \
-    device/zuk/mustang/audio_policy.conf:system/etc/audio_policy.conf
+    device/zuk/z2-common/audio/audio_policy.conf:system/etc/audio_policy.conf
 endif
 
 PRODUCT_COPY_FILES += \
-    device/zuk/mustang/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
-    device/zuk/mustang/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    device/zuk/mustang/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/zuk/mustang/mixer_paths_tasha.xml:system/etc/mixer_paths_tasha.xml \
-    device/zuk/mustang/mixer_paths_dtp.xml:system/etc/mixer_paths_dtp.xml \
-    device/zuk/mustang/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml \
-    device/zuk/mustang/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
-    device/zuk/mustang/sound_trigger_mixer_paths_wcd9330.xml:system/etc/sound_trigger_mixer_paths_wcd9330.xml \
-    device/zuk/mustang/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
-    device/zuk/mustang/audio_platform_info.xml:system/etc/audio_platform_info.xml
+    device/zuk/z2-common/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
+    device/zuk/z2-common/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/zuk/z2-common/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/zuk/z2-common/audio/mixer_paths_tasha.xml:system/etc/mixer_paths_tasha.xml \
+    device/zuk/z2-common/audio/mixer_paths_dtp.xml:system/etc/mixer_paths_dtp.xml \
+    device/zuk/z2-common/audio/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml \
+    device/zuk/z2-common/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    device/zuk/z2-common/audio/sound_trigger_mixer_paths_wcd9330.xml:system/etc/sound_trigger_mixer_paths_wcd9330.xml \
+    device/zuk/z2-common/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
+    device/zuk/z2-common/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
 # Listen configuration file
 PRODUCT_COPY_FILES += \
-    device/zuk/mustang/listen_platform_info.xml:system/etc/listen_platform_info.xml
+    device/zuk/z2-common/audio/listen_platform_info.xml:system/etc/listen_platform_info.xml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -181,23 +181,16 @@ PRODUCT_PACKAGES += \
     libvolumelistener
 
 # WLAN driver configuration files
-PRODUCT_COPY_FILES += \
-    device/zuk/mustang/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat
-
-# Wifi
-PRODUCT_PACKAGES += \
-    wpa_supplicant_overlay.conf \
-    p2p_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
-    device/zuk/mustang/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    device/zuk/mustang/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
-    device/zuk/mustang/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny \
+    device/zuk/z2-common/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    device/zuk/z2-common/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    device/zuk/z2-common/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny \
 
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
-    device/zuk/mustang/sensors/hals.conf:system/etc/sensors/hals.conf
+    device/zuk/z2-common/sensors/hals.conf:system/etc/sensors/hals.conf
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
-    device/zuk/mustang/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+    device/zuk/z2-common/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
