@@ -80,8 +80,6 @@ PRODUCT_BOOT_JARS += \
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
 
-PRODUCT_COPY_FILES += device/zuk/z2-common/audio/whitelistedapps.xml:system/etc/whitelistedapps.xml
-
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=256m
