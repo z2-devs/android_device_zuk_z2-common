@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/z2-common.mk
+	$(LOCAL_DIR)/z2.mk
