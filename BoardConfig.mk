@@ -57,9 +57,13 @@ USE_CAMERA_STUB := true
 -include $(QCPATH)/common/msm8996/BoardConfigVendor.mk
 
 # Some framework code requires this to enable BT
-BOARD_HAVE_BLUETOOTH := true
 BOARD_USES_WIPOWER := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/qcom/common
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/zuk/z2-common/bluetooth
+BOARD_HAS_QCA_BT_ROME := true
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+QCOM_BT_USE_BTNV := true
+QCOM_BT_USE_SMD_TTY := true
 
 USE_OPENGL_RENDERER := true
 BOARD_USE_LEGACY_UI := true
