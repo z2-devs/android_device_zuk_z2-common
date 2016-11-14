@@ -25,4 +25,8 @@ It was announced in February 2016, in three flavours. Release date was April 201
 
 ## Device picture
 
+## Z2 Standard
+![ZUK Z2 Standard in white](http://cdn2.gsmarena.com/vv/pics/lenovo/zuk-z2-2.jpg "ZUK Z2 Standard in white")
+
+## Z2 Pro
 ![ZUK Z2 Pro in black](http://cdn2.gsmarena.com/vv/pics/lenovo/zuk-z2-pro-3.jpg "ZUK Z2 Pro in black")
