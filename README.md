@@ -19,7 +19,7 @@ It was announced in February 2016, in three flavours. Release date was April 201
 | Storage      | 64 GB                                           | 64/128 GB
 | Battery      | Non-removable Li-Po 3500 mAh                    | Non-removable Li-Po 3100 mAh
 | Dimensions   | 141.7 x 68.9 x 8.5 mm                           | 145.4 x 70.5 x 7.5 mm
-| Display      | 1920 x 1080 px, 5.2 inches (424 PPI)            | 1920 x 1080 px, 5.0 inches (441 PPI)
+| Display      | 1920 x 1080 px, 5.0 inches (424 PPI)            | 1920 x 1080 px, 5.2 inches (441 PPI)
 | Rear camera  | 13 MP, f/2.2, PDAF autofocus, dual-LED (dual tone) flash | 13 MP, f/1.8, PDAF autofocus, dual-LED (dual tone) flash
 | Front camera | 8 MP, f/2.0                                     | 8 MP, f/2.0
 
