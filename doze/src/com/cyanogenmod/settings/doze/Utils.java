@@ -23,6 +23,7 @@ import android.os.UserHandle;
 import android.support.v7.preference.PreferenceManager;
 import android.provider.Settings;
 import android.util.Log;
+import com.android.systemui.doze.DozeService;
 
 import static android.provider.Settings.Secure.DOZE_ENABLED;
 
