@@ -33,10 +33,12 @@ public final class Utils {
 
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
 
-    protected static final String AMBIENT_DISPLAY_KEY = "doze_enabled";
+    protected static final String AMBIENT_DISPLAY_KEY = "ambient_display";
     protected static final String PICK_UP_KEY = "pick_up";
+    protected static final String TILT_ALWAYS_KEY = "tilt_always";
     protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
     protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
+    protected static final String PROXIMITY_ALWAYS_KEY = "proximity_always";
 
     public static final Uri DOZE_ENABLED_URI = Settings.Secure.getUriFor(DOZE_ENABLED);
 
@@ -72,6 +74,11 @@ public final class Utils {
                 new UserHandle(UserHandle.USER_CURRENT));
     }
 
+    protected static boolean tiltAlwaysEnabled(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(TILT_ALWAYS_KEY, false);
+    }    
+    
     protected static boolean pickUpEnabled(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(PICK_UP_KEY, false);
@@ -85,6 +92,11 @@ public final class Utils {
     protected static boolean pocketGestureEnabled(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(GESTURE_POCKET_KEY, false);
+    }
+    
+    protected static boolean proximityAlwaysEnabled(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(PROXIMITY_ALWAYS_KEY, false);
     }
 
     protected static boolean sensorsEnabled(Context context) {
